@@ -2,10 +2,10 @@ name: Helm Publish
 
 on:
   push:
-    branches: [ che ]
+    branches: [ eche ]
 
 jobs:
-  publish-helmchart:
+  publish-helmcharts:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
