@@ -2,10 +2,10 @@ name: Helm Publish
 
 on:
   push:
-    branches: [ che ]
+    branches: [ eche ]
 
 jobs:
-  publish-helmchart:
+  publish-helmcharts:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -23,7 +23,7 @@ jobs:
       run: |
         pwd
         ls
-        mv /home/runner/work/demo-publish-helm/demo-publish-helm/handon/*.tgz  /home/runner/work/demo-publish-helm/helmapp        
+        mv /home/runner/work/demo-publish-helm/demo-publish-helm/*.tgz  /home/runner/work/demo-publish-helm/helmapp        
     - name: list contents of helmapp
       run: |
         cd /home/runner/work/demo-publish-helm/helmapp
